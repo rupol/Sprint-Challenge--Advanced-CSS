@@ -108,7 +108,21 @@
       }
 
       .btn:hover {
-        .button-hover(white, @btn-bg-color);
+        .button-hover(
+          white,
+          @btn-bg-color,
+          @translateY-big,
+          0 10px 20px rgba(0, 0, 0, 0.2)
+        );
+      }
+
+      .btn:active {
+        .button-hover(
+          white,
+          @btn-bg-color,
+          @translateY-small,
+          0 5px 10px rgba(0, 0, 0, 0.2)
+        );
       }
 
       @media @phone {

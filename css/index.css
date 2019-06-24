@@ -136,6 +136,11 @@ html,
 body {
   font-family: "Ubuntu", sans-serif;
   color: #5e6164;
+  background: #01194a;
+  background: -moz-linear-gradient(180deg, #01194a 0%, #115997 41%, #88b8d1 76%, #d4ece9 100%);
+  background: -webkit-linear-gradient(180deg, #01194a 0%, #115997 41%, #88b8d1 76%, #d4ece9 100%);
+  background: linear-gradient(180deg, #01194a 0%, #115997 41%, #88b8d1 76%, #d4ece9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#01194a", endColorstr="#d4ece9", GradientType=1);
 }
 h1,
 h2,
@@ -162,6 +167,8 @@ p {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  background: #f6f7f8;
+  border-radius: 10px;
 }
 .nav-bar {
   position: fixed;
@@ -171,6 +178,7 @@ p {
   height: 100px;
   background: #f6f6f6;
   z-index: 5;
+  opacity: 0.9;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -181,17 +189,18 @@ p {
   text-decoration: none;
   color: #454a59;
   font-size: 1.6rem;
+  font-weight: 600;
   padding: 15px 1.5vw;
+  transition: 1s ease-in;
+  position: relative;
 }
 .nav-bar .navigation a:hover {
-  color: #81848e;
+  color: #88b8d1;
 }
 footer {
-  color: #22283B;
+  color: #22283b;
   background: #f4f4f4;
   padding: 20px 0;
-  border: 1px double #e0e0e0;
-  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -304,6 +313,14 @@ footer {
 .home .walk .walk-text .btn:hover {
   background: white;
   color: #22283a;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.home .walk .walk-text .btn:active {
+  background: white;
+  color: #22283a;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 500px) {
   .home .walk .walk-text {

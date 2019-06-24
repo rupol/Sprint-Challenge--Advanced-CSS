@@ -7,6 +7,7 @@
   height: 100px;
   background: @nav-bg;
   z-index: 5;
+  opacity: 0.9;
 
   .flex();
   flex-direction: column;
@@ -18,11 +19,14 @@
       text-decoration: none;
       color: @nav-font;
       font-size: 1.6rem;
+      font-weight: 600;
       padding: 15px 1.5vw;
+      transition: 1s ease-in;
+      position: relative;
     }
 
     a:hover {
-      color: @waterloo;
+      color: @nav-hover;
     }
   }
 }
