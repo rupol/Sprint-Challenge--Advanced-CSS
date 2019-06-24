@@ -14,15 +14,12 @@
   }
 
   .space-images {
-    display: flex;
-    flex-wrap: wrap;
+    .flex();
     width: 100%;
 
     img {
-      width: 28%;
+      .img-style(28%, 20px, 100%);
       margin: 20px 2.5%;
-      border-radius: 20px;
-      height: 100%;
     }
   }
 
@@ -40,7 +37,7 @@
 
   .walk {
     margin-top: 60px;
-    border-top: 1px solid @main-border-color;
+    border-top: @border;
     padding: 50px 60px;
     display: flex;
     justify-content: center;
@@ -57,6 +54,20 @@
       }
 
       .btn {
+        .button-style(
+          7px 19px,
+          auto,
+          @btn-bg-color,
+          @ubuntu,
+          white,
+          1.8rem,
+          @border,
+          0.5rem
+        );
+      }
+
+      .btn:hover {
+        .button-hover(white, @btn-bg-color);
       }
     }
 
@@ -65,9 +76,7 @@
       margin-left: 4%;
 
       img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
+        .img-style(100%, 10px, auto);
       }
     }
   }

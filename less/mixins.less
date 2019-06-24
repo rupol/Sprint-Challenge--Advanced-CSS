@@ -1,1 +1,31 @@
 // Mixins Here
+.flex() {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-style(@width, @border-rad, @height) {
+  width: @width;
+  border-radius: @border-rad;
+  height: @height;
+}
+
+.button-style(@padding, @width, @background, @font, @color, @size, @border, @radius) {
+  padding: @padding;
+  width: @width;
+  background: @background;
+  font-family: @font;
+  color: @color;
+  font-size: @size;
+  border: @border;
+  border-radius: @radius;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+  position: relative;
+}
+
+.button-hover(@background, @color) {
+  background: @background;
+  color: @color;
+}
