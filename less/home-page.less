@@ -1,29 +1,43 @@
 // Home Content
 
 .home {
-
   .intro {
+    margin-top: 100px;
+
+    img {
+      .img-style(100%, 0, auto);
+    }
 
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
   }
 
   .space-images {
-    display: flex;
-    flex-wrap: wrap;
+    .flex();
     width: 100%;
 
     img {
-      width: 28%;
+      .img-style(28%, 20px, 100%);
       margin: 20px 2.5%;
-      border-radius: 20px;
-      height: 100%;
+
+      @media @phone {
+        .img-style(100%, 20px, 100%);
+      }
+    }
+
+    @media @phone {
+      .sky {
+        display: none;
+      }
+
+      .launch {
+        display: none;
+      }
     }
   }
 
@@ -37,14 +51,24 @@
     p {
       margin-top: 13px;
     }
+
+    @media @phone {
+      padding: 15px 0 35px 15px;
+    }
   }
 
   .walk {
     margin-top: 60px;
-    border-top: 1px solid @main-border-color;
+    border-top: @border;
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+
+    @media @phone {
+      margin-top: 0;
+      flex-wrap: wrap-reverse;
+      padding: 20px 3%;
+    }
 
     .walk-text {
       width: 50%;
@@ -58,18 +82,66 @@
       }
 
       .btn {
+        .button-style(
+          7px 19px,
+          auto,
+          @btn-bg-color,
+          @ubuntu,
+          white,
+          1.8rem,
+          @border,
+          0.5rem
+        );
+
+        @media @phone {
+          .button-style(
+            25px 19px,
+            100%,
+            @btn-bg-color,
+            @ubuntu,
+            white,
+            1.8rem,
+            @border,
+            0.5rem
+          );
+        }
+      }
+
+      .btn:hover {
+        .button-hover(
+          white,
+          @btn-bg-color,
+          @translateY-big,
+          0 10px 20px rgba(0, 0, 0, 0.2)
+        );
+      }
+
+      .btn:active {
+        .button-hover(
+          white,
+          @btn-bg-color,
+          @translateY-small,
+          0 5px 10px rgba(0, 0, 0, 0.2)
+        );
+      }
+
+      @media @phone {
+        width: 100%;
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+
       img {
+        .img-style(100%, 10px, auto);
+      }
+
+      @media @phone {
         width: 100%;
-        height: auto;
-        border-radius: 10px;
+        margin: 0 0 20px 0;
       }
     }
   }
-}// home
+} // home

@@ -1,1 +1,59 @@
 // Mixins Here
+.flex() {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-style(@width, @border-rad, @height) {
+  width: @width;
+  border-radius: @border-rad;
+  height: @height;
+}
+
+.button-style(@padding, @width, @background, @font, @color, @size, @border, @radius) {
+  padding: @padding;
+  width: @width;
+  background: @background;
+  font-family: @font;
+  color: @color;
+  font-size: @size;
+  border: @border;
+  border-radius: @radius;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+  position: relative;
+}
+
+.button-hover(@background, @color, @transform, @shadow) {
+  background: @background;
+  color: @color;
+  transform: @transform;
+  box-shadow: @shadow;
+}
+
+.blue-gradient() {
+  background: rgb(1, 25, 74);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(1, 25, 74, 1) 0%,
+    rgba(17, 89, 151, 1) 41%,
+    rgba(136, 184, 209, 1) 76%,
+    rgba(212, 236, 233, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(1, 25, 74, 1) 0%,
+    rgba(17, 89, 151, 1) 41%,
+    rgba(136, 184, 209, 1) 76%,
+    rgba(212, 236, 233, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(1, 25, 74, 1) 0%,
+    rgba(17, 89, 151, 1) 41%,
+    rgba(136, 184, 209, 1) 76%,
+    rgba(212, 236, 233, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#01194a",endColorstr="#d4ece9",GradientType=1);
+}

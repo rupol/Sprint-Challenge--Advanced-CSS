@@ -7,14 +7,24 @@ html {
   font-size: 62.5%;
 }
 
-html, body {
-  font-family: 'Ubuntu', sans-serif;
+html,
+body {
+  font-family: @ubuntu;
   color: @main-font-color;
+  .blue-gradient();
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Russo One', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: @russo;
   color: @header-font-color;
+}
+
+h1 {
+  font-size: 4rem;
 }
 
 h2 {
@@ -33,6 +43,7 @@ p {
 .container {
   max-width: 800px;
   width: 100%;
-  margin: 0 auto;  
+  margin: 0 auto;
+  background: @main-background;
+  border-radius: 10px;
 }
-
